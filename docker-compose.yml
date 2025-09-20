@@ -1,0 +1,9 @@
+version: "3.8"
+services:
+  rtmp-hls:
+    build: .
+    ports:
+      - "8080:8080"   # HTTP HLS
+      - "1935:1935"   # RTMP ingest
+    volumes:
+      - ./hls:/var/www/hls
