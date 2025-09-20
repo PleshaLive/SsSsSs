@@ -16,4 +16,7 @@ RUN echo "load_module modules/ngx_rtmp_module.so;" > /etc/nginx/modules.conf
 
 EXPOSE 8080 1935
 
+# Создаем директорию для pid файла nginx
+RUN mkdir -p /run/nginx
+
 CMD ["nginx", "-g", "daemon off;"]
